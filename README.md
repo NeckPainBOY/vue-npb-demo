@@ -1,4 +1,6 @@
 # vue-npb-demo
+自己练习使用项目
+Vue 2 + Ant Design + Vuex + router + Webpack
 
 ## Project setup
 ```
