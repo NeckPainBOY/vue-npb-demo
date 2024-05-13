@@ -1,6 +1,7 @@
 # vue-npb-demo
 自己练习使用项目
-Vue 2 + Ant Design + Vuex + router + Webpack
+Vue 2 + Ant Design + Vuex + router + Webpack 
+数据：Mock.js
 
 ## Project setup
 ```
