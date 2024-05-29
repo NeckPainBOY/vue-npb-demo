@@ -4,7 +4,7 @@
       <a-layout-content>
         <a-row>
           <a-col :span="14">
-            <img class="logo" alt="Vue logo" src="../assets/logo.svg" />
+            <img class="logo" alt="Vue logo" src="../../../assets/logo.svg" />
           </a-col>
           <a-col :span="10">
             <div class="loginForm">
@@ -36,7 +36,7 @@ export default {
   name: "LoginView",
   data() {
     return {
-      objectItem: require("@/assets/mockjs").default.list,
+      objectItem: require("@/mockjs").default.list,
     };
   },
   created() {

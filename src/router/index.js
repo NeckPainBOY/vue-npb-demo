@@ -1,19 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import LoginView from "../views/Login.vue";
+// import { component } from "vue/types/umd";
+// import LoginView from "../views/Login.vue";
+import { basicRoutes } from "./routes/basic";
 
 Vue.use(VueRouter);
+const routes = [...basicRoutes];
 
-const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: LoginView,
-  },
-];
-
-const router = new VueRouter({
+export const router = new VueRouter({
   routes,
 });
-
-export default router;
