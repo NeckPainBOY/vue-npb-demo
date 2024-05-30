@@ -1,14 +1,15 @@
 export const basicRoutes = [
   {
-    // path: "/",
-    // name: "ROOT",
+    path: "/",
+    name: "ROOT",
     // component: "LATOUT",
-    // redirect: "/home",
-    // children: {
+    redirect: "/home",
+    children: [],
+  },
+  {
     path: "/home",
     name: "Home",
     component: () => import("@/views/home/Home.vue"),
-    // },
   },
   {
     path: "/login",

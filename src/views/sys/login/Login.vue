@@ -1,78 +1,60 @@
 <template>
-  <a-layout>
-    <a-layout>
-      <a-layout-content>
-        <a-row>
-          <a-col :span="14">
-            <img class="logo" alt="Vue logo" src="../../../assets/logo.svg" />
-          </a-col>
-          <a-col :span="10">
-            <div class="loginForm">
-              <p class="loginFont">登录</p>
-              <a-row>
-                <a-col :span="6">用户名：</a-col>
-                <a-col :span="16"><a-input placeholder="Basic usage" /></a-col>
-              </a-row>
-              <a-row>
-                <a-col :span="6">密码：</a-col>
-                <a-col :span="16"
-                  ><a-input-password placeholder="input password"
-                /></a-col>
-              </a-row>
-              <a-button type="primary">login</a-button>
-            </div>
-          </a-col>
-        </a-row></a-layout-content
-      >
-    </a-layout>
+  <a-layout class="h-full">
+    <!-- <a-layout-header>header</a-layout-header> -->
+    <a-layout-content>
+      <div class="flex justify-center w-full h-full overflow-auto">
+        <div class="w-1/2 h-full">
+          <div
+            class="w-full h-full bg-center bg-no-repeat bg-cover bg-SBR-logo"
+          ></div>
+        </div>
+        <div class="flex flex-col justify-center w-1/2 h-full">
+          <div class="w-1/2 py-5 mx-auto text-center bg-white rounded-md">
+            <p class="my-5">登录</p>
+            <a-row class="mb-5">
+              <a-col :span="6">用户名：</a-col>
+              <a-col :span="16"><a-input placeholder="Basic usage" /></a-col>
+            </a-row>
+            <a-row class="mb-5">
+              <a-col :span="6">密码：</a-col>
+              <a-col :span="16"
+                ><a-input-password placeholder="input password"
+              /></a-col>
+            </a-row>
+            <a-button type="primary">登录</a-button>
+          </div>
+        </div>
+      </div>
+    </a-layout-content>
     <a-layout-footer>Footer</a-layout-footer>
   </a-layout>
 </template>
 
 <script>
-// @ is an alias to /src
+import { Layout, Button, Col, Row, Input } from "ant-design-vue";
+// const LayoutHeader = Layout.Header;
+const LayoutContent = Layout.Content;
+const LayoutFooter = Layout.Footer;
+const InputPassword = Input.Password;
 
 export default {
   name: "LoginView",
+  components: {
+    ALayout: Layout,
+    ALayoutFooter: LayoutFooter,
+    ALayoutContent: LayoutContent,
+    ACol: Col,
+    ARow: Row,
+    AButton: Button,
+    AInput: Input,
+    AInputPassword: InputPassword,
+    // ALayoutHeader: LayoutHeader,
+  },
   data() {
-    return {
-      objectItem: require("@/mockjs").default.list,
-    };
+    return {};
   },
-  created() {
-    console.log("this.objectItem");
-    console.log(this.objectItem);
-  },
+  created() {},
 };
 </script>
 
-<style lang="less" scoped>
-.loginForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-  margin: 0 auto;
-  margin-top: calc(100vh - 650px);
-  min-height: 300px;
-  background: rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-.loginForm .ant-row {
-  margin-top: 30px;
-}
-.loginForm .loginFont {
-  font-size: 30px;
-  font-weight: bolder;
-}
-
-.loginForm .ant-btn-primary {
-  margin: 30px auto;
-  width: 50%;
-}
-
-body .logo {
-  width: 100%;
-  height: calc(100vh - 69px);
-}
-</style>
+<style lang="less" scoped></style>
