@@ -16,4 +16,9 @@ export const basicRoutes = [
     name: "Login",
     component: () => import("@/views/sys/login/Login.vue"),
   },
+  {
+    path: "/hot",
+    name: "Post",
+    component: () => import("@/views/sys/login/Login.vue"),
+  },
 ];
